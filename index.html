@@ -1,1 +1,324 @@
-<h1>github page</h1>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Dhaymar Christian Aroni</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #1a2a40;
+            --accent-color: #3498db;
+            --background: #f4f7fa;
+            --text-dark: #1f2d3d;
+            --text-light: #ffffff;
+}
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+            background-image: url('img/formas-geometricas-abstractas-del-fondo-o-textura.jpg');
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+            color: var(--text-dark);
+        }
+
+        .navbar {
+            background-color: rgba(26, 42, 64, 0.95);
+            padding: 20px 0;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+        }
+
+        .navbar h1 {
+            font-family: 'Playfair Display', serif;
+            color: var(--text-light);
+            font-size: 28px;
+            margin: 0 0 10px;
+        }
+
+        .navbar a {
+            color: var(--text-light);
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .navbar a:hover {
+            color: var(--accent-color);
+        }
+
+        section {
+            background-color: rgba(255, 255, 255, 0.92);
+            margin: 60px auto;
+            padding: 40px 60px;
+            max-width: 900px;
+            border-radius: 16px;
+            box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+        }
+
+        section h1 {
+            font-size: 34px;
+            color: var(--primary-color);
+            border-bottom: 3px solid var(--accent-color);
+            padding-bottom: 8px;
+            margin-bottom: 30px;
+        }
+
+        .docente-card {
+            background-color: #fff;
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 25px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .docente-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin-top: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        img:hover {
+            transform: scale(1.04);
+        }
+
+        a {
+            color: var(--accent-color);
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            background-color: var(--primary-color);
+            color: var(--text-light);
+            text-align: center;
+            padding: 20px 10px;
+            font-size: 14px;
+            margin-top: 60px;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        p a img {
+            vertical-align: middle;
+            margin-right: 5px;
+        }
+
+        @media (max-width: 700px) {
+            section {
+                padding: 20px;
+            }
+
+            .navbar h1 {
+                font-size: 22px;
+            }
+
+            .navbar a {
+                display: block;
+                margin: 10px 0;
+            }
+
+            img {
+                width: 100%;
+            }
+        }
+
+        #amigos {
+            background-color: rgba(255, 255, 255, 0.95);
+            margin: 60px auto;
+            padding: 40px 60px;
+            max-width: 900px;
+            border-radius: 16px;
+            box-shadow: 0 6px 18px rgba(52, 152, 219, 0.3);
+        }
+
+        #amigos h1 {
+            font-size: 34px;
+            color: var(--accent-color);
+            border-bottom: 4px solid var(--primary-color);
+            padding-bottom: 10px;
+            margin-bottom: 35px;
+            font-family: 'Playfair Display', serif;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .amigos-lista {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+            justify-items: center;
+        }
+
+        .amigo-card {
+            background-color: var(--background);
+            border-radius: 12px;
+            padding: 15px;
+            width: 180px;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(26, 42, 64, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: default;
+        }
+
+        .amigo-card:hover {
+            transform: translateY(-7px);
+            box-shadow: 0 8px 24px rgba(52, 152, 219, 0.4);
+        }
+
+        .amigo-card img {
+            border-radius: 50%;
+            margin-bottom: 12px;
+            transition: transform 0.3s ease;
+        }
+
+        .amigo-card img:hover {
+            transform: scale(1.1);
+        }
+
+        .amigo-card p {
+            font-weight: 600;
+            color: var(--primary-color);
+            font-family: 'Roboto', sans-serif;
+            font-size: 18px;
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="navbar">
+        <h1>Dhaymar Christian Aroni</h1>
+        <a href="#sobre-mi">Sobre mí</a>
+        <a href="#cursos">Cursos</a>
+        <a href="#docentes">Docentes</a>
+        <a href="#amigos">Mis amigos</a>
+    </div>
+
+    <section id="sobre-mi">
+        <h1>¿Sobre mí?</h1>
+        <p>Hola, me presento. Mi nombre es Dhaymar Christian Aroni, tengo 18 años y estudio la carrera de Ciencia de la 
+        Computación en la Universidad Católica San Pablo. Me gustan mucho los animales, la naturaleza (como las estrellas y la luna), 
+        pasar tiempo con mis amigos y escuchar música. Me apasiona la Inteligencia Artificial.</p>
+
+        <p><a target="_blank" href="https://mail.google.com/">
+            <img src="img/gmaikl.webp" width="15"> dhaymar.aroni@ucsp.edu.pe</a></p>
+        <p><a target="_blank" href="https://www.linkedin.com/in/dhaymar-christian-aroni-mamani-956164330/">
+            <img src="img/linkedin.png" width="15"> LINKEDIN</a></p>
+        <p><a target="_blank" href="https://github.com/boretd">
+            <img src="img/github-6980894_960_720.webp" width="15"> GITHUB</a></p>
+
+        <p><img src="img/yo.jpeg" width="200"></p>
+    </section>
+
+    <section id="cursos">
+        <h1>Mis cursos</h1>
+        <ul>
+            <li>Programación de Videojuegos</li>
+            <li>Estructuras Discretas</li>
+            <li>Introducción a Ciencia de la Computación</li>
+            <li>Introducción a la Filosofía</li>
+            <li>Persona, Matrimonio y Familia</li>
+        </ul>
+    </section>
+
+    <section id="docentes">
+        <h1>Mis docentes</h1>
+
+        <div class="docente-card">
+            <p><a target="_blank" href="https://www.linkedin.com/in/julissa-villanueva-llerena/">JULISSA GIULIANA VILLANUEVA LLERENA</a></p>
+            <img src="img/julissa-modified.png" width="200">
+        </div>
+
+        <div class="docente-card">
+            <p><a target="_blank" href="https://www.linkedin.com/in/kelly-vizconde-la-motta-3a57a4143/">KELLY VIZCONDE LA MOTTA</a></p>
+            <img src="img/miskelly.jpg" width="200">
+        </div>
+
+        <div class="docente-card">
+            <p><a target="_blank" href="https://www.linkedin.com/in/ecuadrosv/">ERNESTO CUADROS VARGAS</a></p>
+            <img src="img/profe ernesto.jpg" width="200">
+        </div>
+
+        <div class="docente-card">
+            <p><a target="_blank" href="https://www.linkedin.com/in/fernando-alberto-lacunza-murillo-604580220/">FERNANDO ALBERTO LACUNZA MURILLO</a></p>
+            <img src="img/1631669734590.jpg" width="200">
+        </div>
+
+        <div class="docente-card">
+            <p><a target="_blank" href="#">CAROLINA MARGARITA DIANDERAS CACERES</a></p>
+            <img src="img/profesora carolina.jpeg" width="200">
+        </div>
+    </section>
+
+    <section id="amigos">
+        <h1>Mis amigos</h1>
+        <div class="amigos-lista">
+            <div class="amigo-card">
+                <img src="img/amigo1.jpg" alt="" width="180">
+                <p><a target="_blank" href="https://julioiluj.github.io/githubpageJulioEduardoPinoCharun/">Julio Eduardo Pino Charun</a></p>
+            </div>
+            <div class="amigo-card">
+                <img src="img/amigo2.jpg" alt="" width="180">
+                <p><a target="_blank" href="https://gabriellv1.github.io/My-first-website/#contacto">Gabriel Arcángel Villafuerte Huachaca</a></p>
+            </div>
+            <div class="amigo-card">
+                <img src="img/amigo3.jpg" alt="" width="180">
+                <p><a target="_blank" href="https://julioiluj.github.io/githubpageJulioEduardoPinoCharun/">Julio Eduardo Pino Charun</a></p>
+            </div>
+            <div class="amigo-card">
+                <img src="img/amigo1.jpg" alt="" width="180">
+                <p><a target="_blank" href="https://julioiluj.github.io/githubpageJulioEduardoPinoCharun/">Julio Eduardo Pino Charun</a></p>
+            </div>
+            <div class="amigo-card">
+                <img src="img/amigo1.jpg" alt="" width="180">
+                <p><a target="_blank" href="https://julioiluj.github.io/githubpageJulioEduardoPinoCharun/">Julio Eduardo Pino Charun</a></p>
+            </div>
+            <div class="amigo-card">
+                <img src="img/amigo1.jpg" alt="" width="180">
+                <p><a target="_blank" href="https://julioiluj.github.io/githubpageJulioEduardoPinoCharun/">Julio Eduardo Pino Charun</a></p>
+            </div>
+            <div class="amigo-card">
+                <img src="img/amigo1.jpg" alt="" width="180">
+                <p><a target="_blank" href="https://julioiluj.github.io/githubpageJulioEduardoPinoCharun/">Julio Eduardo Pino Charun</a></p>
+            </div>
+            <div class="amigo-card">
+                <img src="img/amigo1.jpg" alt="" width="180">
+                <p><a target="_blank" href="https://julioiluj.github.io/githubpageJulioEduardoPinoCharun/">Julio Eduardo Pino Charun</a></p>
+            </div>
+            <div class="amigo-card">
+                <img src="img/amigo1.jpg" alt="" width="180">
+                <p><a target="_blank" href="https://julioiluj.github.io/githubpageJulioEduardoPinoCharun/">Julio Eduardo Pino Charun</a></p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        © 2024 Dhaymar Christian Aroni. Todos los derechos reservados.
+    </footer>
+
+</body>
+</html>
